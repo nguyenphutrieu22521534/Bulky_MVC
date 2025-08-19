@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace BookStore.Utility
 {
@@ -20,11 +22,9 @@ namespace BookStore.Utility
 
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            //logic to send email
-
             //var client = new SendGridClient(SendGridSecret);
 
-            //var from = new EmailAddress("hello@dotnetmastery.com", "Bulky Book");
+            //var from = new EmailAddress("hello@dotnetmastery.com", "BookStore");
             //var to = new EmailAddress(email);
             //var message = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
 
